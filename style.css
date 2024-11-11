@@ -1,0 +1,291 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --color1: #D89584;
+    --color2: #f4f4f4;
+}
+body{
+    margin: 0;
+    font-family: Arial;
+    line-height: 1.5;
+}
+iframe{
+    width: 100%;
+    border: none;
+    height: 350px;
+}
+div.cover{
+    background: url(cover_overlay.png) no-repeat center/100% 100%,url(cover.jpg) no-repeat center/cover;
+    /* superposition d'imagele plus proche étant le premier. 100%( taille image en x et en y) */
+    height: 360px;
+    position: relative;
+}
+img.cover-profile{
+    height:100px;
+    position: relative;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: 50px;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 42px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+div.cover p{
+    color: lightgray;
+    text-align: center;
+    margin-top: 8px;
+    font-size: 14px;
+}
+div.cover-contact{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    border-left: 4px solid var(--color1);
+    padding-left: 8px;
+}
+div.cover-contact p{
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+} 
+div.cover-contact p:first-child{
+    margin-bottom: 14px;
+    /* si on avait mis margin-bottom div.cover-contact p, le deuxieme aussi aurai eu une marge basse ce qui ferais débordé le border */
+}
+div.cover-contact a{
+    color: white;
+    font-size: 14px;
+}
+a.contact-button{
+    color:var(--color1);
+    border:var(--color1) solid 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 8px 20px;
+    text-decoration: none;
+    display: inline-block;
+    /*  pour qu'il prenne en compte la marge on fait le display inline block */
+    margin-top: 15px;
+    font-size: 14px;
+}
+a.contact-button:hover{
+    color:white;
+    border:white solid 3px
+}
+
+.section{
+    padding-top: 30px ;
+    padding-bottom: 30px ;
+    padding-left: 40px;
+    padding-right: 40px;
+    overflow: auto;
+}
+
+div.section-grise1{
+    background: url(triangle2white.svg) no-repeat center bottom -1px/100%;
+    background-color: var(--color2);
+    padding-bottom: 70px ;
+}
+
+div.section-grise2{
+    background: url(triangle1white.svg) no-repeat center top/100%;
+    background-color: var(--color2);
+    padding-top: 80px ;
+}
+
+h2{
+    text-align: center;
+    font-size:34px ;
+    margin-top: 0;
+}
+
+div.separateur{
+    background-color: #979797;
+    height: 1px;
+    width: 150px;
+    position: relative;
+    left: 50%;
+    margin-left: -75px;
+}
+div.section-grise1 p{
+    font-size: 22px;
+    color:#656565;
+    text-align: center;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+img.colonne-contenu{
+    width: 40%;
+}
+div.colonne-contenu{
+    width: 60%;
+    padding-left: 16px;
+}
+.float-right{
+    float: right;
+}
+div.texte-avec-ligne-verticale{
+   border-left: 4px solid var(--color1);
+   padding-left: 8px;
+   height: 50px;
+   display: inline-block;
+}
+div.texte-avec-ligne-verticale p{
+    margin-top: 0;
+}
+
+div.bar-verticale{
+    height: 50px;
+    width: 4px;
+    background-color: var(--color1);
+    margin-right: 8px;
+}
+
+.col-portfolio{
+    width: 47%;
+}
+div.frame{
+    margin: 30px 50px;
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow:0 0 8px 8px rgba(0, 0, 0, 0.1) ;
+}
+p.frame-title {
+    font-size:30px ;
+    margin-top:5px ;
+    margin-bottom: 20px;
+    text-align: center;
+}
+img.frame-image{
+    width: 100px;
+}
+
+/* Portfolio */
+
+.portfolio-header{
+    height:90px ;
+    /* background-image: url(header.jpg); */
+    background: url(header.jpg) no-repeat center/cover;
+}
+p.portfolio-header-title{
+    font-size: 26px;
+    font-weight:bold ;
+    color: white;
+    padding-top: 4px;
+    padding-left: 8px;
+}
+a.portfolio-button{
+    float: right;
+    margin-top: 25px;
+}
+h1.portfolio{
+    font-size: 46px;
+    color: black;
+    line-height: 1;
+    padding-top: 10px;
+}
+h2.portfolio{
+    font-size: 26px;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+a.portfolio-back{
+    color: var(--color1);
+    margin-left: -30px;
+}
+img.portfolio-content{
+    display: block;
+    margin: auto;
+    width: 70%;
+    max-width: 475px;
+}
+a.portfolio-content{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+.display-mobile{
+    display: none;
+}
+
+/* Responsive design */
+@media screen and (max-width: 767px) {
+    img.cover-profile{
+        height:90px;
+        margin-top: 75px;
+    }
+    h1{
+        font-size: 38px;
+        margin-top: 6px;
+        margin-bottom: 0;
+    }
+    div.cover p{
+        margin-top: 2px;
+        font-size: 13px;
+    }
+    .section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    div.section-grise1{
+        padding-bottom: 40px ;
+    }
+    h2{
+        font-size:30px ;
+    }
+    img.colonne-contenu{
+        width: 100%;
+    }
+    div.colonne-contenu{
+        width: 100%;
+        padding-left: 0px;
+        margin-top: 20px;
+    }
+    .col-portfolio{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    div.frame{
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+    img.frame-image{
+        width: 70px;
+    }
+    p.portfolio-header-title{
+        font-size: 20px;
+        padding-left: 4px;
+        padding-top: 10px;
+    }
+    a.portfolio-button{
+        margin-right: 8px;
+    }
+    a.contact-button{
+        padding: 7px 12px;
+        margin-top: 22px;
+        font-size: 12px;
+    }
+    a.portfolio-back{
+        margin-left: -10px;
+    }
+    h1.portfolio{
+        font-size: 40px;
+    }
+    h2.portfolio{
+        font-size: 22px;
+    }
+    img.portfolio-content{
+        width: 100%;
+    }
+    .display-mobile{
+        display: block;
+    }
+}
